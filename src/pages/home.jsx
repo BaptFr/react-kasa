@@ -7,8 +7,8 @@ import '../styles/App.css';
 function Home() {
   return (
 
-  <div> <Galerie />
-  </div>
+   <Galerie />
+  
   );
 }
 

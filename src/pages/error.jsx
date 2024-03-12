@@ -1,6 +1,6 @@
 import React from 'react';
 
-function Error() {
+function NotFound() {
     return (
     <div className="Error">
   
@@ -11,6 +11,6 @@ function Error() {
     );
   }
   
-  export default Error
+  export default NotFound
        
   
