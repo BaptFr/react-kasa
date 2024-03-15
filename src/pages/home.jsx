@@ -1,13 +1,13 @@
 import React from 'react';
 import Galerie from '../components/galerie.jsx';
-import '../styles/App.css';
-
-
+import Banner from '../components/homeBanner.jsx'
 
 function Home() {
   return (
-
-   <Galerie />
+    <div>
+      <Banner/> 
+      <Galerie />
+   </div>
   
   );
 }
@@ -17,5 +17,5 @@ export default Home
 
       
 
-
+ 
 
