@@ -1,12 +1,13 @@
 import React from 'react';
-import Galerie from '../components/galerie.jsx';
-import Banner from '../components/homeBanner.jsx'
+import Gallery from '../components/gallery.jsx';
+import Banner from '../components/homeBanner.jsx';
+import '../styles/gallery.scss';
 
 function Home() {
   return (
     <div>
-      <Banner/> 
-      <Galerie />
+      <Banner /> 
+      <Gallery />
    </div>
   
   );

@@ -8,8 +8,8 @@
   flex-direction:row ;
   flex-wrap: nowrap;
   font-family:'Montserrat' ;
+  
 }
-
 .nav-header {
   max-height: 40px;
   display: flex;
@@ -25,28 +25,33 @@
   width: 210x;
   height: 68px;
  }
-
-.nav-header a {
+.nav-header button{
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 24px;
   font-weight: 500;
   text-decoration: none; 
-  color: black; 
+  border: none;
+  padding-bottom: 0px; 
+  color: black;
+  background-color: white;
+  font-family:'Montserrat';
 
 }
-.nav-header a:hover {
+.nav-header a{
+  text-decoration: none; 
+}
+.nav-header button:hover {
 cursor: pointer;
 }
 .nav-header a.active {
-text-decoration: underline;
-text-decoration-thickness: 1px;
+border-bottom: 1px solid;
 }
 
 .footer{
-  margin: 66px -100px 29px -100px;
-  padding-top: 66px;
+  margin: 66px -500px 0px -500px;
+  padding-top: 50px;
   font-size: 24px;
   font-style: normal;
   font-weight: 500;

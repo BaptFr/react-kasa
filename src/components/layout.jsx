@@ -14,8 +14,12 @@ function Layout({ children }) {
                     <img src={kasaLogoR} alt="Logo-kasa-r" />
                 </div >
                 <nav className='nav-header'>
-                <NavLink exact to="/" activeClassName="active">Accueil</NavLink>
-                <NavLink to="/about" activeClassName="active">A Propos</NavLink>
+                    <NavLink exact to="/" activeClassName="active">
+                        <button>Accueil</button>
+                    </NavLink>
+                    <NavLink to="/about" activeClassName="active">
+                        <button>A Propos</button>
+                    </NavLink>
                 </nav>
             </header>
             <main>
