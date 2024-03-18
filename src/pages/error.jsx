@@ -1,10 +1,11 @@
 import React from 'react';
+import Error404 from '../components/errorDisplay.jsx'
 
 function NotFound() {
     return (
-    <div className="Error">
+    <div>
   
-      {"ERREUR 404"}
+      <Error404 />
   
   
     </div>

@@ -8,7 +8,7 @@ import { NavLink } from 'react-router-dom';
 
 function Layout({ children }) {
     return (
-        <div>
+        <>
             <header className='header'>
                 <div className='kasa-title'>
                     <img src={kasaLogoR} alt="Logo-kasa-r" />
@@ -29,7 +29,7 @@ function Layout({ children }) {
                 <img src={kasaLogoBl} alt="Logo-kasa-bl" />
                 <p>© 2020 Kasa. All rights reserved</p>
             </footer>
-        </div>
+        </>
     );
 }
 

@@ -4,7 +4,8 @@ html {
 }
 
 body {
-    max-width: 1440px;
+    max-width: 2000px;
+    width: 100%;
     padding: 0;
     height: 100%;
     margin : 45px 100px 0px 100px;
@@ -12,5 +13,8 @@ body {
     flex-direction: column;
     gap: 50px; //VERRIF ! 
     font-family:"Montserrat";
+}
 
+ul, ol {
+    list-style: none; 
 }

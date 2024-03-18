@@ -1,14 +1,16 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import Card from './card.jsx';
 import data from '../datas/annonces.json';
  
 function Gallery() {
     return (
-        <div className='gallery-container'>
-            {data.map((annonce, index) => (
-                <Card key={index} cover={annonce.cover} title={annonce.title} />
+        <ul className='gallery-container'>
+            {data.map((annonce, id) => (
+                <li key={id}>
+                    <Card cover={annonce.cover} title={annonce.title} />
+                </li>
             ))}
-        </div>
+        </ul>
     )
 }
 
