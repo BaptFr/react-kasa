@@ -9,7 +9,6 @@ function Home() {
   return (
     <div>
       <Banner  imageSrc={homeBannerPic} showText = {true} /> 
-      
       <Gallery />
    </div>
   

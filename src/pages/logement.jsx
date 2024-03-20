@@ -1,16 +1,12 @@
 import React from 'react';
+import LogementDetails from '../components/logementDetails.jsx';
 
-function Logement() {
-    return (
-    <div >
-  
-      {"TEST ROUTE LOGEMENT "}
-  
-  
-    </div>
-    );
-  }
-  
-  export default Logement
-       
-  
+function Logement (){
+  return (
+  <div>
+  <LogementDetails />
+  </div>
+  );
+}
+
+export default Logement

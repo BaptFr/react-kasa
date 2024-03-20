@@ -7,7 +7,7 @@ function Gallery() {
         <ul className='gallery-container'>
             {data.map((annonce, id) => (
                 <li key={id}>
-                    <Card cover={annonce.cover} title={annonce.title} />
+                    <Card id={annonce.id} cover={annonce.cover} title={annonce.title} />
                 </li>
             ))}
         </ul>
