@@ -10,13 +10,13 @@ function Carousel ({pictures})  {
     
     const nextPic = () => {
         setCurrentPictureIndex(prevIndex =>
-          prevIndex === pictures.length - 1 ? 0 : prevIndex + 1  //retour même sur la 1ere image
+          prevIndex === pictures.length - 1 ? 0 : prevIndex + 1  //Image suivante. si dernière image, retour même sur la 1ere image
         );
       };
 
       const prevPic = () => {
         setCurrentPictureIndex(prevIndex =>
-          prevIndex === 0 ? pictures.length - 1 : prevIndex - 1 //next fonctionnel même sur la dernière image
+          prevIndex === 0 ? pictures.length - 1 : prevIndex - 1 //Imag précedente. Si première image, retour sur la dernière image.
         );
       };
 
