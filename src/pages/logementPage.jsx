@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import Carousel from '../components/carousel.jsx';
 import annoncesData from '../datas/annonces.json';
+import Rating from '../components/ratingStars.jsx';
 import Collapse from '../components/collapse.jsx';
 import '../styles/logement.scss';
 
@@ -11,7 +12,7 @@ function Logement() {
 
   useEffect(() => {
     const logementData = annoncesData.find(item => item.id === id);
-    setLogement(logementData); //changement d'état
+    setLogement(logementData); 
   }, [id]);
  
   if (!logement) {
@@ -28,8 +29,7 @@ function Logement() {
         </div>
         <div id='host-container'>
           <p>{logement.host.name}</p>
-          <div className='host-picture'><img src={logement.host.picture} alt='Portrait du propriétaire'></img>
-          </div>
+            <img id='host-content' src= {logement.host.picture} alt='Portrait du propriétaire' />       
         </div>
       </div>  
 
@@ -43,12 +43,17 @@ function Logement() {
             ))}
           </ul>
         </div>
-        <div className='logement-tags-container'> {logement.rating}</div>
-      </div>
+        <div className='logement-rating-container'> 
+          <Rating rating={logement.rating} /></div>
+        </div>
 
       <div className='logement-collapses-container'>
-        <Collapse/>
-        <Collapse/>
+        <Collapse title='Description'> 
+          <p>{logement.description}</p>
+        </Collapse>
+        <Collapse title='Équipements'> 
+         <p>{logement.equipments}</p>
+        </Collapse>
         
       </div>
     </div>

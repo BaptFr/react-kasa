@@ -4,7 +4,6 @@ import '../styles/carousel.scss';
 import ArrowR from '../assets/arrow-r.png';
 import ArrowL from '../assets/arrow-l.png';
 
-
 function Carousel ({pictures})  {
     const [currentPictureIndex, setCurrentPictureIndex] = useState(0);
     

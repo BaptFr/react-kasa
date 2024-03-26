@@ -1,9 +1,6 @@
 import React from 'react';
 import '../styles/banner.scss';
 
-
-
-
 function Banner({ imageSrc, showText}){
     return(
     <div className="banner">

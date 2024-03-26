@@ -3,8 +3,6 @@ import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import '../styles/card.scss';
 
-
-
 function Card({ id, cover, title }){
     return (
         <Link to={`/logement/${id}`} className='card-link'>
@@ -23,6 +21,5 @@ Card.propTypes = {
     cover: PropTypes.string.isRequired,
     title: PropTypes.string.isRequired
 };
-
 
 export default Card
