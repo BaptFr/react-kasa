@@ -23,8 +23,8 @@
   }
   
   .carousel-nav button {
-    width: 57px ;
-    height: 79px;
+    width: 70px ;
+    height: 100px;
     color: #FFFFFF;
     background: inherit;
     border: none;
@@ -37,4 +37,14 @@
   
   .next-button {
     margin-right: 23px;
+  }
+
+  #index {
+    top: 280%;
+    left: 50%;
+    position: absolute;
+    z-index: 1;
+    font-size: 24px;
+    font-weight: 500;
+    color: white; 
   }

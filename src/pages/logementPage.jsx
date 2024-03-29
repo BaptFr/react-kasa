@@ -45,14 +45,20 @@ function Logement() {
         </div>
         <div className='logement-rating-container'> 
           <Rating rating={logement.rating} /></div>
-        </div>
+      </div>
 
       <div className='logement-collapses-container'>
         <Collapse title='Description'> 
           <p>{logement.description}</p>
         </Collapse>
-        <Collapse title='Équipements'> 
-         <p>{logement.equipments}</p>
+        <Collapse title='Équipements'>
+          <ul>
+           {logement.equipments.map((equipement, index) => (
+            <li key={index}>
+              <p>{equipement}</p>
+            </li>
+           ))}
+         </ul> 
         </Collapse>
         
       </div>
