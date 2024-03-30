@@ -1,14 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
-import '../styles/card.scss';
+import './card.sass';
 
 function Card({ id, cover, title }){
     return (
-        <Link to={`/logement/${id}`} className='card-link'>
+        <Link to={`/logement/${id}`} className='card__link'>
             <div className= 'card'>
-                <img src= {cover} alt='couverture-annonce'/>
-                <p className='card-title'>{title}</p>
+                <img src= {cover} alt='logement annonce'/>
+                <p className='card__title'>{title}</p>
                 <div className='overlay'></div>
             </div>
         </Link>

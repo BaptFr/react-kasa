@@ -1,19 +1,19 @@
 
 import React from 'react';
-import '../styles/layout.scss';
-import '../styles/main.scss';
-import kasaLogoR from '../assets/kasa-logo-r.png';
-import kasaLogoBl from '../assets/kasa-logo-bl.png';
+import './layout.sass';
+import '../../pagesStyles/main.sass';
+import kasaLogoR from '../../assets/kasa-logo-r.png';
+import kasaLogoBl from '../../assets/kasa-logo-bl.png';
 import { NavLink } from 'react-router-dom';
 
 function Layout({ children }) {
     return (
         <>
             <header className='header'>
-                <div className='kasa-title'>
+                <div className='header__title'>
                     <img src={kasaLogoR} alt="Logo-kasa-r" />
                 </div >
-                <nav className='nav-header'>
+                <nav className='navbar'>
                     <NavLink exact to="/" activeClassName="active">
                         <button>Accueil</button>
                     </NavLink>
@@ -31,6 +31,7 @@ function Layout({ children }) {
             </footer>
         </>
     );
+
 }
 
 export default Layout;

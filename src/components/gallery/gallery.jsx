@@ -1,6 +1,6 @@
 import React from 'react';
-import Card from './card.jsx';
-import data from '../datas/annonces.json';
+import Card from '../card/card.jsx';
+import data from '../../datas/annonces.json';
  
 function Gallery() {
     return (

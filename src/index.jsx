@@ -5,7 +5,7 @@ import Home from './pages/homePage.jsx';
 import About from './pages/aboutPage.jsx';
 import NotFound from './pages/errorPage.jsx';
 import Logement from './pages/logementPage.jsx';
-import Layout from './components/layout.jsx';
+import Layout from './components/layout/layout.jsx';
 
 
 createRoot(document.getElementById('root')).render(

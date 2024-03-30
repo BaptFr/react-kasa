@@ -1,5 +1,5 @@
 import React from 'react';
-import Error404 from '../components/errorDisplay.jsx'
+import Error404 from '../components/error/errorDisplay.jsx'
 
 function NotFound() {
     return (
