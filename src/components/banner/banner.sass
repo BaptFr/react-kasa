@@ -33,3 +33,45 @@
 
 #about__banner img
  filter: brightness(150%)
+
+
+
+// Media Queries TABLET
+$breakpoint-tablet: 700px
+@media screen and (max-width: $breakpoint-tablet)
+
+  .banner
+    height: 150px
+    min-width: 335px
+    
+
+    p
+      display: flex
+      flex-wrap: wrap
+      max-width: 375px
+      margin: 0 10px
+      font-size: 1.9em
+      line-height: 100%
+     
+
+
+
+// Media Queries MOBILE
+
+$breakpoint-mobile: 480px
+@media screen and (max-width: $breakpoint-mobile)
+
+  .banner
+    height: 111px
+    min-width: 335px
+    justify-content: flex-start
+
+    p
+      max-width: 220px
+      margin: 0px 20px
+      font-size: 1.6em
+      text-align: left
+      line-height: 100%
+    
+  
+    
