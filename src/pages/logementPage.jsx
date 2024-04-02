@@ -20,34 +20,36 @@ function Logement() {
   }
 
   return (
-    <div className='logement-page-container'>
+    <div className='logement-page__container'>
       <Carousel pictures={logement.pictures} />
 
-      <div className='logement-infos-container'>
-        <div> <p id='logement-name'> {logement.title}</p>
-              <p id ='logement-location'>{logement.location}</p> 
-        </div>
-        <div id='host-container'>
-          <p>{logement.host.name}</p>
-            <img id='host-content' src= {logement.host.picture} alt='Portrait du propriétaire' />       
-        </div>
-      </div>  
+      <div className='logement-infos__container'>
+        <div className='logement-details__container'>
+          <div> <p id='logement-name'> {logement.title}</p>
+                <p id ='logement-location'>{logement.location}</p> 
+          </div>
+          <div className='logement-tags__container'> 
+            <ul>
+              {logement.tags.map((tag, index) => (
+                  <li key={index}>
+                    <p>{tag}</p>
+                  </li>
+              ))}
+            </ul>
+          </div> 
+        </div> 
+        <div className='host-and-rate__container'>
+          <div id='host-container'>
+              <p>{logement.host.name}</p>
+                <img id='host-content' src= {logement.host.picture} alt='Portrait du propriétaire' />       
+            </div>
 
-      <div className='logement-tags-and-rate-container'>
-        <div className='logement-tags-container'> 
-          <ul>
-            {logement.tags.map((tag, index) => (
-                <li key={index}>
-                  <p>{tag}</p>
-                </li>
-            ))}
-          </ul>
-        </div>
-        <div className='logement-rating-container'> 
-          <Rating rating={logement.rating} /></div>
-      </div>
+            <div className='logement-rating__container'> 
+              <Rating rating={logement.rating} /></div>
+          </div>
+      </div> 
 
-      <div className='logement-collapses-container'>
+      <div className='logement-collapses__container'>
         <Collapse title='Description'> 
           <p>{logement.description}</p>
         </Collapse>

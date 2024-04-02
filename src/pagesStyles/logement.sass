@@ -5,90 +5,201 @@
   flex-direction: column
   justify-content: center
 
-.logement-infos-container 
-  margin: 30px 0px 1px 0px
-  display: flex
-  flex-direction: row
-  justify-content: space-between
-  align-items: flex-start
-
-#logement-name 
-  margin: 0
-  color: #FF6060
-  font-size: 40px
-  font-weight: 500
-
-#logement-location
-  margin-top: 5px
-  color: #000
-  font-size: 20px
-  font-style: normal
-  font-weight: 500
-
-#host-container 
-  display: flex
-  flex-direction: row
-  gap: 15px
-
-#host-container p
-  width: 93px
-  height: 100%
-  display: flex
-  direction: rtl
-  flex-wrap: wrap
-  color: #FF6060
-  font-size: 20px
-  font-weight: 500
-  line-height: 25px
-
-#host-content
-  height: 64px
-  width: 64px
-  margin-top: 10px
-  border-radius: 50%
-
-.logement-tags-and-rate-container
-  height: 70px
-  margin: 0
+.logement-infos__container
+  margin: 30px 0px
   display: flex
   flex-direction: row
   justify-content: space-between
 
-.logement-tags-and-rate-container ul
-  display: flex
-  flex-direction: row
-  justify-content: space-between
-  gap: 15px
+  .logement-details__container
+    margin: 0
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    align-items: flex-start
 
-.logement-tags-and-rate-container li
-  width: auto
-  height: 25px
-  padding: 0px 30px
-  margin: auto
-  display: flex
-  align-items: center
-  justify-content: center
-  color: #FFFFFF
-  background-color: #FF6060
-  border-radius: 10px
-  font-size: 14px
-  font-weight: 700
+    #logement-name 
+      margin: 10px 0px 0px 0px
+      color: #FF6060
+      font-size: 40px
+      font-weight: 500
 
-.logement-rating-container 
-  font-size: 25px
+    #logement-location
+      margin-top: 5px
+      color: #000
+      font-size: 20px
+      font-style: normal
+      font-weight: 500
 
-.logement-rating-container svg
-  margin-left:13px
+    .logement-tags__container ul
+      display: flex
+      flex-direction: row
+      justify-content: space-between
+      gap: 15px
+      margin: 5px 0px 0px 0px
+      
 
-.logement-collapses-container
+    .logement-tags__container li
+      width: auto
+      height: 25px
+      padding: 0px 30px
+      margin: auto
+      display: flex
+      align-items: center
+      justify-content: center
+      color: #FFFFFF
+      background-color: #FF6060
+      border-radius: 10px
+      font-size: 14px
+      font-weight: 700
+
+
+  .host-and-rate__container
+    height: 70px
+    margin: 0
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+
+    #host-container 
+      display: flex
+      flex-direction: row
+      justify-content: flex-end
+      gap: 15px
+
+    #host-container p
+      width: 93px
+      height: 100%
+      margin-top: 12px
+      display: flex
+      direction: rtl
+      flex-wrap: wrap
+      color: #FF6060
+      font-size: 20px
+      font-weight: 500
+      line-height: 30px
+
+    #host-content
+      height: 64px
+      width: 64px
+      margin-top: 10px
+      border-radius: 50%
+  
+    .logement-rating__container 
+      font-size: 25px
+      margin-right: 5px
+
+    .logement-rating__container svg
+      margin-left:13px
+      margin-right: 0
+
+
+.logement-collapses__container
   width: 100%
-  margin-top: -15px
-  margin-bottom: 40px
+  margin-top: 0px
+  margin-bottom: 2px
   display: flex
   flex-direction: row
   justify-content: space-between
   gap: 76px
 
-.logement-collapses-container li
+.logement-collapses__container li
   font-size: 26px
   line-height: 10px
+
+
+
+
+// carousel component style
+@import '../components/carousel/carousel.sass' 
+
+
+// Media Queries MEDIUM DEVICES
+$breakpoint-medium: 1024px
+@media screen and (max-width: $breakpoint-medium)
+  .carousel__picture__container
+    height: 255px
+
+  .carousel__nav button
+    width: 50px
+    height: 50px
+
+  #index
+    top: 100px
+    font-size: 15px
+
+  .logement-infos__container
+    .host-and-rate__container
+      .logement-rating-container 
+        font-size: 16px
+      
+
+
+// Media Queries SMALL DEVICES
+$breakpoint-small: 768px
+@media screen and (max-width: $breakpoint-small)
+
+  carousel__picture__container
+    width: 335px
+    height: 255px
+
+  .carousel__nav button
+    width: 24px
+    height: 24px
+    margin: 0
+
+  #index
+    top: 115px
+    font-size: 5px
+  
+
+  
+
+
+  .logement-infos__container
+    flex-direction: column
+
+    .logement-details__container
+
+      #logement-name
+        margin: 0px
+        font-size: 18px
+      
+      #logement-location
+        font-size: 14px
+      
+
+      .logement-tags__container ul
+        display: flex
+        flex-direction: row
+        justify-content: space-between
+        gap: 15px
+        margin: 5px 0px 0px 0px
+        
+
+      .logement-tags__container li
+        width: auto
+        height: 18px
+        padding: 0px 30px
+        font-size: 10px
+        
+
+
+    .host-and-rate__container
+      flex-direction: row-reverse
+      align-items: center
+      margin-top: 20px 
+
+      .logement-rating-container 
+        font-size: 16px
+        justify-content: center
+    
+    
+
+.logement-collapses__container
+  flex-direction: column
+  gap: 0px
+
+
+
+  

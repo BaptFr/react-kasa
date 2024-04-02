@@ -3,31 +3,34 @@
     height: 100%
     border-radius: 25px
     margin-bottom: 50px
-    padding: 80px 0px
-    display: flex
-    flex-direction: row
-    justify-content: center
-    gap: 80px
-    flex-wrap: wrap
+    padding: 50px 50px
+    display: grid
+    grid-template-columns: repeat(3, 1fr)
+    grid-auto-rows: 1fr
+    grid-gap: 50px
+    box-sizing: border-box
     background-color: #F6F6F6
 
 
-// Media Queries TABLET
-$breakpoint-tablet: 700px
-@media screen and (max-width: $breakpoint-tablet)
+// Media Queries MEDIUM DEVICES
+$breakpoint-medium: 1024px
+@media screen and (max-width: $breakpoint-medium)
 
-    .gallery-container  
+    .gallery-container
+        grid-template-columns: repeat(2, 1fr)
+        padding: 20px 20px
+        grid-gap: 20px
+        margin-bottom: 20px
+    
+    
+// Media Queries SMALL DEVICES
+$breakpoint-small: 768px
+@media screen and (max-width: $breakpoint-small)
+    .gallery-container 
+        grid-template-columns: repeat(1, 1fr) 
         background-color: inherit
-        padding: 0
-        gap: 20px
-
-
-
-// Media Queries MOBILE
-$breakpoint-mobile: 480px
-@media screen and (max-width: $breakpoint-mobile)
-
-
-
+        padding: 0px
+       
+       
     
         

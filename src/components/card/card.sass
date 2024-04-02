@@ -1,26 +1,31 @@
 .card
-  width: 400px
-  height: 400px
+  width: 100%
+  height: 100%
   border-radius: 10px
   display: flex
   flex-direction: column
   color: white
   position: relative
   cursor: pointer
+  
 
   .card__title
-    width: 295px
+    min-width: 20%
+    max-width: 65%
     height: 52px
     padding: 0 5%
     display: flex
     align-items: center
-    font-size: 22px
+    
+    font-size: 100%
     font-style: normal
     font-weight: 550
     line-height: 24px
     position: absolute
-    top: 300px
+    bottom: -5px
     z-index: 1
+   
+    
 
   
   img
@@ -41,28 +46,29 @@
 
 
 
-// Media Queries TABLET
-$breakpoint-tablet: 700px
-@media screen and (max-width: $breakpoint-tablet)
+// Media Queries MEDIUM DEVICES
+$breakpoint-medium: 1024px
+@media screen and (max-width: $breakpoint-medium)
+  .card
+    .card__title
+      max-width: 100%
+      font-size: 18px
+      bottom: -10px
+   
 
- 
 
 
-
-// Media Queries MOBILE
-
-$breakpoint-mobile: 480px
-@media screen and (max-width: $breakpoint-mobile)
+// Media Queries SMALL DEVICES
+$breakpoint-small: 768px
+@media screen and (max-width: $breakpoint-small)
 
   .card
-    width: 335px
-    height: 255px
-
     .card__title
-      width: 250px
-      font-size: 18px
-      top: 170px
-      
+      min-width: 10%
+      max-width: 65%
+      font-size: 14px
+      bottom: -10px
+
 
 
 

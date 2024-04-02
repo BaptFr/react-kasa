@@ -8,7 +8,7 @@ import '../components/gallery/gallery.sass';
 function Home() {
   const homeBannerBrightness= '45%'
   return (
-    <div>
+    <div className='home__container'>
       <Banner  imageSrc={homeBannerPic} showText = {true} brightness={homeBannerBrightness}/> 
       <Gallery />
    </div>

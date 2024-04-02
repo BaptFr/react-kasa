@@ -23,7 +23,7 @@
     display: flex
     justify-content: center
     align-items: center
-    font-size: 24px
+    font-size: 25px
     font-weight: 500
     text-decoration: none
     border: none
@@ -43,9 +43,12 @@
     color: black
 
 .footer
-  margin: 0px -500px 0px -500px
+  with: 100%
   padding-top: 66px
   padding-bottom: 30px
+  position: absolute
+  left: 0
+  right: 0
   font-size: 24px
   font-style: normal
   font-weight: 500
@@ -53,13 +56,25 @@
   flex-direction: column
   justify-content: center
   align-items: center
+  flex-wrap: wrap
   background-color: black
   color: white
+  
+  img
+    margin-bottom: 20px
 
 
-// Media Queries TABLET
-$breakpoint-tablet: 700px
-@media screen and (max-width: $breakpoint-tablet)
+// Media Queries MEDIUM DEVICES
+
+
+$breakpoint-medium: 1024px
+@media screen and (max-width: $breakpoint-medium)
+
+$breakpoint-medium: 1024px
+@media screen and (max-width: $breakpoint-medium)
+
+  .header
+    margin-bottom: 20px
 
   .navbar
     justify-content: flex-end
@@ -71,40 +86,35 @@ $breakpoint-tablet: 700px
       align-items: flex-end
       font-size: 20px
       font-weight: 500
+      text-transform: uppercase
    
   .header__title img
     width: 145px
     height: 46px
+  
+  .footer
+    margin: 0px -25px
+    img
+      width: 120px
+      margin-bottom: 10px
 
-
-
-
-
-
-// Media Queries MOBILE
-
-$breakpoint-mobile: 480px
-@media screen and (max-width: $breakpoint-mobile)
-
-
-  .navbar
-    justify-content: flex-end
-    gap: auto
-    margin: 0
-    
-    
-    button
-      justify-content: flex-end
-      align-items: flex-end
+    p
       font-size: 12px
-      font-weight: 500
-      text-transform: uppercase
-      
+      width: 100px
+
+
+// Media Queries SMALL DEVICES
+$breakpoint-small: 768px
+@media screen and (max-width: $breakpoint-small)
+  .navbar
+    button
+      font-size: 10px
+       
   .header__title img
     width: 145px
     height: 46px
 
   
-footer  
-  margin: 0
+  
+
 

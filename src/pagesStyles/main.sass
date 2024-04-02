@@ -1,39 +1,41 @@
 
-
-html
-  display: flex
-  justify-content: center
-  
-
 body
-  max-width: 2000px
-  width: 100%
+  max-width: 2440px
   padding: 0
-  height: 100%
   margin: 45px 100px 0px 100px
   display: flex
   flex-direction: column
-  gap: 50px 
-  font-family: "Montserrat"
-
+  justify-content: space-between
+  align-items: center
+  gap: 50px
+  font-family: 'Montserrat', sans-serif  
+ 
 ul, ol
   list-style: none
   margin: 0
   padding: 0
 
+.home__container
+  width: 100%
+  display: flex
+  flex-direction: column
+  align-items: center
+  justif-ycontent: center
 
 
-// Media Queries TABLET
-$breakpoint-tablet: 700px
-@media screen and (max-width: $breakpoint-tablet)
+// Media Queries MEDIUM DEVICES
+$breakpoint-medium: 1024px
+@media screen and (max-width: $breakpoint-medium)
 
-
-// Media Queries MOBILE
-$breakpoint-mobile: 480px
-@media screen and (max-width: $breakpoint-mobile)
   body  
-    margin: 0px 0px
-    align-items: center
-    margin: 20px 
-    justifycontent: center
+    margin: 20px 50px 0px 50px
+      
+      
+// Media Queries SMALL DEVICES
+$breakpoint-small: 768px
+@media screen and (max-width: $breakpoint-small)
+
+  body  
+    margin: 20px 20px 0px 20px
+
 
