@@ -8,13 +8,13 @@ function Carousel ({pictures})  {
   const [currentPictureIndex, setCurrentPictureIndex] = useState(0);
   const nextPic = () => {
     setCurrentPictureIndex(prevIndex =>
-      prevIndex === pictures.length - 1 ? 0 : prevIndex + 1  //Image suivante. si dernière image, retour même sur la 1ere image
+      prevIndex === pictures.length - 1 ? 0 : prevIndex + 1  //Next picture
       );
     };
     
   const prevPic = () => {
     setCurrentPictureIndex(prevIndex =>
-    prevIndex === 0 ? pictures.length - 1 : prevIndex - 1 //Image précedente. Si première image, retour sur la dernière image.
+    prevIndex === 0 ? pictures.length - 1 : prevIndex - 1 //Previous carousel picture
     );
   };
 
@@ -27,7 +27,6 @@ function Carousel ({pictures})  {
     </> 
     ) : null; 
 
-
     return (
     <div className='carousel__picture__container'>
       <img src={selectedPicture} alt={'intérieur du logement'} />
@@ -38,8 +37,8 @@ function Carousel ({pictures})  {
 }
 
 Carousel.propTypes = {
-    picture: PropTypes.arrayOf(PropTypes.string).isRequired,
-    title: PropTypes.string.isRequired
+    pictures: PropTypes.arrayOf(PropTypes.string).isRequired,
+    title: PropTypes.string
 };
 
 export default Carousel;

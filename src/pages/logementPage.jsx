@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams, useNavigate } from 'react-router-dom';
 import Carousel from '../components/carousel/carousel.jsx';
 import annoncesData from '../datas/annonces.json';
 import Rating from '../components/rating/ratingStars.jsx';
@@ -8,26 +8,33 @@ import '../pagesStyles/logement.sass';
 
 function Logement() {
   const { id } = useParams();
+  const navigate = useNavigate();
   const [logement, setLogement] = useState(null); 
 
   useEffect(() => {
     const logementData = annoncesData.find(item => item.id === id);
-    setLogement(logementData); 
-  }, [id]);
+    if (!logementData) {
+      navigate('/pages/errorPage.jsx');
+    } else {
+      setLogement(logementData);
+    }
+  }, [id, navigate]);
  
   if (!logement) {
-    return 'Chargement';
+    return 'Chargement...';
   }
 
   return (
     <div className='logement-page__container'>
+      <h2> description du logement </h2>
       <Carousel pictures={logement.pictures} />
 
       <div className='logement-infos__container'>
         <div className='logement-details__container'>
-          <div> <p id='logement-name'> {logement.title}</p>
-                <p id ='logement-location'>{logement.location}</p> 
-          </div>
+          <> 
+            <p id='logement-name'> {logement.title}</p>
+            <p id ='logement-location'>{logement.location}</p> 
+          </>
           <div className='logement-tags__container'> 
             <ul>
               {logement.tags.map((tag, index) => (
@@ -38,15 +45,17 @@ function Logement() {
             </ul>
           </div> 
         </div> 
-        <div className='host-and-rate__container'>
-          <div id='host-container'>
-              <p>{logement.host.name}</p>
-                <img id='host-content' src= {logement.host.picture} alt='Portrait du propriétaire' />       
-            </div>
 
-            <div className='logement-rating__container'> 
-              <Rating rating={logement.rating} /></div>
+        <div className='host-and-rate__container'>
+          <div id='host__container'>
+              <p>{logement.host.name}</p>
+              <img id='host__content' src= {logement.host.picture} alt='Portrait du propriétaire' />       
           </div>
+
+          <div className='logement-rating__container'> 
+            <Rating rating={logement.rating} />
+          </div>
+        </div>
       </div> 
 
       <div className='logement-collapses__container'>

@@ -8,8 +8,11 @@ import data from '../datas/about.json';
 function About() {
     const aboutBannerBrightness = '70%';
     return (
-        <div>
+        <div className='about-page__container'>
+            <h2> à propos </h2>
+            <div className='about-page__banner'>
             <Banner imageSrc={aboutBannerPic} showText={false} brightness={aboutBannerBrightness} />
+            </div>
             <div className='about__collapses'>
                 <ul>
                     {data.map((collapseData, index) => (

@@ -1,6 +1,3 @@
-.about__collapses
-  margin: 60px 108px
-  box-sizing: border-box
 
 .collapse__container
   width: 100%
@@ -8,8 +5,8 @@
   display: flex
   flex-direction: column
   align-items: center
-  padding-bottom: 45px
   background-color: white
+ 
 
 .collapse__title
   width: 100%
@@ -36,14 +33,14 @@
 
 .collapse__content
   width: 100%
-  height: 250px
+  height: 100%
   box-sizing: border-box
   border-radius: 0px 0px 5px 5px
-  padding: 10px 20px
+  padding: 10px 20px 0px 20px
   font-size: 26px
   font-weight: 500
   background-color: #F6F6F6
-  color: #000
+  color: #000000
   max-height: 0
   opacity: 0
   transition: max-height 0.3s ease, opacity 0.5s ease
@@ -62,3 +59,60 @@
 .collapse__content.visible p
   transform: translateY(0)
   margin-top: 25px
+
+
+
+//aboutPage  collapse STYLE
+.about__collapses
+  margin: 0px 108px 0px 108px
+  box-sizing: border-box
+
+  .collapse__content
+    margin-bottom: 25px
+
+  .collapse__title  
+    height: 52px
+  
+ 
+ 
+
+ 
+// Media Queries MEDIUM DEVICES
+$breakpoint-medium: 1024px
+@media screen and (max-width: $breakpoint-medium)
+  .collapse__title
+    height: 45px
+    font-size: 18px
+    padding: 0px 10px
+
+    button
+      height: 25px
+      
+    button img
+        margin-top: -6px 
+        
+  .collapse__content
+    font-size: 22px
+
+  
+      
+      
+// Media Queries SMALL DEVICES
+$breakpoint-small: 768px
+@media screen and (max-width: $breakpoint-small)
+  .about__collapses
+    margin: 0
+
+    .collapse__title
+      height: 40px
+      font-size: 15px
+      
+   
+  .collapse__content
+    font-size: 18px
+    ul
+      padding-bottom: 1px
+      li
+        font-size: 18px
+        line-height: 2px
+   

@@ -1,4 +1,4 @@
-.header
+header
   width: 100%
   margin-bottom: 50px
   display: flex
@@ -42,38 +42,35 @@
     width: fit-content
     color: black
 
-.footer
+
+footer
   with: 100%
-  padding-top: 66px
-  padding-bottom: 30px
+  margin-top: 20px
   position: absolute
   left: 0
   right: 0
-  font-size: 24px
-  font-style: normal
-  font-weight: 500
-  display: flex
-  flex-direction: column
-  justify-content: center
-  align-items: center
-  flex-wrap: wrap
-  background-color: black
-  color: white
-  
-  img
-    margin-bottom: 20px
+ 
+  .footer__containt
+    padding-top: 50px
+    padding-bottom: 40px
+    font-size: 24px
+    font-weight: 500
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    flex-wrap: wrap
+    gap: 10px
+    background-color: black
+    color: white
+    
 
 
 // Media Queries MEDIUM DEVICES
-
-
 $breakpoint-medium: 1024px
 @media screen and (max-width: $breakpoint-medium)
 
-$breakpoint-medium: 1024px
-@media screen and (max-width: $breakpoint-medium)
-
-  .header
+  header
     margin-bottom: 20px
 
   .navbar
@@ -92,15 +89,19 @@ $breakpoint-medium: 1024px
     width: 145px
     height: 46px
   
-  .footer
-    margin: 0px -25px
-    img
-      width: 120px
-      margin-bottom: 10px
+  footer
+    
+    .footer__containt
+      gap: 8px
 
-    p
-      font-size: 12px
-      width: 100px
+      img
+        width: 180px
+        
+      p
+        font-size: 16px
+        width: 130px
+        margin-bottom: 50px
+        
 
 
 // Media Queries SMALL DEVICES
@@ -108,11 +109,21 @@ $breakpoint-small: 768px
 @media screen and (max-width: $breakpoint-small)
   .navbar
     button
-      font-size: 10px
+      font-size: 12.5px
        
   .header__title img
     width: 145px
     height: 46px
+  
+  footer
+    .footer__containt
+      padding: 60px 0px 140px 0px
+      img
+        width: 120px
+        margin-bottom: 0px
+      p
+        font-size: 12px
+        width: 100px
 
   
   

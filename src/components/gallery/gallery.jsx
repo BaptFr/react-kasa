@@ -4,7 +4,7 @@ import data from '../../datas/annonces.json';
  
 function Gallery() {
     return (
-        <ul className='gallery-container'>
+        <ul className='gallery__container'>
             {data.map((annonce, id) => (
                 <li key={id}>
                     <Card id={annonce.id} cover={annonce.cover} title={annonce.title} />

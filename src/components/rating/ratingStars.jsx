@@ -10,13 +10,12 @@ function Rating ({rating}){
       icon={faStar}
       style={{ color: index < rating ? '#ff6060' : '#e3e3e3' }}
     />
-
-
     ))
     return(
-        <div>
+        <>
+            <h3> notations du logement </h3>
             {stars}
-        </div>
+        </>
     )
 }
 

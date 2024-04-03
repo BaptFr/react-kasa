@@ -9,15 +9,16 @@ import { NavLink } from 'react-router-dom';
 function Layout({ children }) {
     return (
         <>
-            <header className='header'>
+            <header>
+                <h1> kasa </h1>
                 <div className='header__title'>
                     <img src={kasaLogoR} alt="Logo-kasa-r" />
                 </div >
                 <nav className='navbar'>
-                    <NavLink exact to="/" activeClassName="active">
+                    <NavLink to="/" >
                         <button>Accueil</button>
                     </NavLink>
-                    <NavLink to="/about" activeClassName="active">
+                    <NavLink to="/about" >
                         <button>A Propos</button>
                     </NavLink>
                 </nav>
@@ -25,9 +26,11 @@ function Layout({ children }) {
             <main>
                 {children}
             </main>
-            <footer className='footer'>
-                <img src={kasaLogoBl} alt="Logo-kasa-bl" />
-                <p>© 2020 Kasa. All rights reserved</p>
+            <footer>
+                <div className='footer__containt'>
+                    <img src={kasaLogoBl} alt="Logo-kasa-bl" />
+                    <p>© 2020 Kasa. All rights reserved</p>
+                </div>
             </footer>
         </>
     );
