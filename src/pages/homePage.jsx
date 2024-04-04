@@ -13,7 +13,7 @@ function Home() {
       <h2> gallerie choix d'appartements </h2>
       <Banner  imageSrc={homeBannerPic} showText = {true} brightness={homeBannerBrightness}/> 
       <Gallery />
-   </div>
+    </div>
   
   );
 }
