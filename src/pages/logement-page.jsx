@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import Carousel from '../components/carousel/carousel.jsx';
 import annoncesData from '../datas/annonces.json';
-import Rating from '../components/rating/ratingStars.jsx';
+import Rating from '../components/rating/rating-stars.jsx';
 import Collapse from '../components/collapse/collapse.jsx';
 import '../pagesStyles/logement.sass';
 

@@ -1,10 +1,10 @@
 import React from 'react';
 import { createRoot } from 'react-dom/client';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Home from './pages/homePage.jsx';
-import About from './pages/aboutPage.jsx';
-import NotFound from './pages/errorPage.jsx';
-import Logement from './pages/logementPage.jsx';
+import Home from './pages/home-page.jsx';
+import About from './pages/about-page.jsx';
+import NotFound from './pages/error-page.jsx';
+import Logement from './pages/logement-page.jsx';
 import Layout from './components/layout/layout.jsx';
 
 
