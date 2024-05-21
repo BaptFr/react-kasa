@@ -10,7 +10,7 @@ import Layout from './components/layout/layout.jsx';
 
 createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <Router>
+    <Router basename="/kasa">
       <Layout>
           <Routes>
             <Route path="/" element={<Home />} />
