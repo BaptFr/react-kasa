@@ -7,7 +7,6 @@ import NotFound from './pages/error-page.jsx';
 import Logement from './pages/logement-page.jsx';
 import Layout from './components/layout/layout.jsx';
 
-
 createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <Router>
