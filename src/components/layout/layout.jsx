@@ -29,7 +29,7 @@ function Layout({ children }) {
             <footer>
                 <div className='footer__containt'>
                     <img src={kasaLogoBl} alt="Logo-kasa-bl" />
-                    <p>© 2020 Kasa. All rights reserved</p>
+                    <p>© 2025 Kasa. All rights reserved</p>
                 </div>
             </footer>
         </>
